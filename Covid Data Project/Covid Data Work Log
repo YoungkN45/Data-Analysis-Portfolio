@@ -1,0 +1,38 @@
+Plan: Study covid data across countries to determine which factors, if any, predict covid case rates.
+
+Questions: 
+Does population density play a role in covid case rates?
+Does government stringency (lockdowns, mask mandates, vaccine mandates) play a role in covid case rates?
+Does how developed a country is affect covid case rates?
+
+3/30/2022
+Retrieved data from: https://ourworldindata.org/covid-deaths
+Used Excel to split data into 4 data sets:
+  1.	Case & Death data
+  2.	Test & Vaccine data
+  3.	Location & Population data
+  4.	Excess Mortality data
+Used R to:
+  Removed duplicate rows from Location & Population data using R
+  Removed rows with no Excess Mortality data using R
+Saved as: Covid Data Project Data Cleanup Code.R
+
+3/31/2022
+Created a Covid Portfolio Project SQL server database on my computer: sqlcmd -S DESKTOP-6TM6V97 -E
+Imported data from .CSV files and created tables in the database
+•	Used SQL Server Management Studio
+•	tests & vaccinations integers needed to be bigint 
+
+4/6/2022
+Used Azure Data Studio Explored the data in SQL
+Explored Data
+Wrote SQL query to remove rows w/ all NULL data in dbo.cases & deaths
+Wrote SQL query to replace all NULL values in the [total deaths] column of dbo.cases & deaths with 0
+Wrote SQL query to get case rate and death rate per population per country, joined tables, and exported the data to ‘Covid case rate & death rate per population per country.CSV’
+Saved SQL Code as: Covid Data Project SQL code.docx
+Exported SQL Query Results to: Covid-case-rate-&-death-rate-per-population-per-country.csv
+
+4/7/2022
+Imported Covid-case-rate-&-death-rate-per-population-per-country.csv to R
+Mutated population_density from character to numeric
+Created a function (pdcr_Scatter) to create a scatter plot of population_density v Case_Rate_%_Per_Pop
