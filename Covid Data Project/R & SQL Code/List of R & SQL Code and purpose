@@ -1,0 +1,17 @@
+I am storing all my R and SQL code for this project here
+
+R code 
+
+R Code:
+  1. Covid Data Project Data Cleanup R Code
+      - Used to remove duplicate rows from Covid-Location-&-Population-data and Covid-Excess-Mortality-Data
+      - Created Covid-Location-&-Population-data-small and Covid-Excess-Mortality-Data-small CSV files
+  2. Covid Data Project Analysis R code
+      - Used to create a scatter plot of population_density V Case_Rate_%_Per_Country
+      
+ SQL Code:
+  1. Covid Project SQL Code
+      -Used to remove rows from dbo.cases & deaths where [total cases] = NULL
+      -Used to update [total deaths] = NULL to 0 in dbo.cases & deaths
+      -Created Queries to get death rate % and case rate % per population per country and join them with location data
+      -Exported that query to covid-case-rate-%-death-rate-per-population-per-country CSV for use in R.
