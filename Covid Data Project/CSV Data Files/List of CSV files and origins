@@ -1,0 +1,15 @@
+I am storing all my .CSV data files here
+The original Data file is too big to store
+
+Files slit from original data:
+ 1. Covid-Case-&-Death-data
+ 2. Covid-Location-&-Population-Data
+ 3. Covid-Test-&-Vaccine-Data
+ 4. Covid-Excess-Mortality-Data
+
+Files created using R to remove duplicate data:
+ 1. Covid-Location-&-Population-data-small
+ 2. Covid-Excess-Morality-Data-small
+ 
+Files created from SQL queries:
+ 1. Covid-case-rate-&-deat-rate-per-population-per-country
